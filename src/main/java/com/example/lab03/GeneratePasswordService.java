@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GeneratePasswordService {
     @RequestMapping("/{name}.generate")
     public String generate(@PathVariable("name") String name) {
-        int x = 500000;
-        return "Hi, " + name + "\n" + "Your new password is " + x + ".";
+        double x = Math.random();
+        return "Hi, " + name + "\n" + "Your new password is " + Math.floor(x * 1000000) + ".";
     }
 }

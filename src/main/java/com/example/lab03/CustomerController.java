@@ -10,7 +10,12 @@ public class CustomerController {
     private List<Customer> customers;
 
     public CustomerController() {
-        customers = new ArrayList<Customer>();
+        this.customers = new ArrayList<Customer>();
+        this.customers.add(new Customer("1010", "John", "Male", 25));
+        this.customers.add(new Customer("1018", "Peter", "Male", 24));
+        this.customers.add(new Customer("1019", "Sara", "Female", 23));
+        this.customers.add(new Customer("1110", "Rose", "Female", 23));
+        this.customers.add(new Customer("1001", "Emma", "Female", 30));
     }
 
     @RequestMapping("/customers")

@@ -3,11 +3,11 @@ package com.example.lab03;
 public class Customer {
     private String ID;
     private String name;
-    private String sex;
+    private boolean sex;
     private int age;
 
     public Customer() {
-        this("", null, "female", 0);
+        this("", null, "Female", 0);
     }
 
     public Customer(String ID, String n, String s, int a) {
@@ -34,10 +34,14 @@ public class Customer {
     }
 
     public void setSex(String sex) {
-        this.sex = sex;
+        boolean s = false;
+        if (sex.toLowerCase().equals("male")) {
+            s = true;
+        }
+        this.sex = s;
     }
 
-    public String getSex() {
+    public boolean getSex() {
         return sex;
     }
 
